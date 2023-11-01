@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1941b8b33a024b54984963cb301a340f" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="BaseModel.Cars" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseModel.Categories" Width="1.5" PointX="2.875" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseModel.Drivers" Width="1.5" PointX="2.625" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseModel.InsuranceCopmanyes" Width="1.5" PointX="9.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseModel.Licenses" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseModel.Marks" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseModel.Models" Width="1.5" PointX="9.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseModel.Passports" Width="1.5" PointX="1.5" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseModel.Policies" Width="1.5" PointX="7.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseModel.Regions" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseModel.Users" Width="1.5" PointX="7.25" PointY="10" IsExpanded="true" />
+        <AssociationConnector Association="BaseModel.FK_Cars_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="BaseModel.FK_Cars_Drivers" ManuallyRouted="false" />
+        <AssociationConnector Association="BaseModel.FK_Cars_Marks" ManuallyRouted="false" />
+        <AssociationConnector Association="BaseModel.FK_Cars_Models" ManuallyRouted="false" />
+        <AssociationConnector Association="BaseModel.FK_Policies_Cars" ManuallyRouted="false" />
+        <AssociationConnector Association="BaseModel.FK_Drivers_Regions" ManuallyRouted="false" />
+        <AssociationConnector Association="BaseModel.FK_Licenses_Drivers1" ManuallyRouted="false" />
+        <AssociationConnector Association="BaseModel.FK_Passports_Drivers1" ManuallyRouted="false" />
+        <AssociationConnector Association="BaseModel.FK_Policies_Drivers" ManuallyRouted="false" />
+        <AssociationConnector Association="BaseModel.FK_Users_Drivers" ManuallyRouted="false" />
+        <AssociationConnector Association="BaseModel.FK_Policies_InsuranceCopmanyes" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

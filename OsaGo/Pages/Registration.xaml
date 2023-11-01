@@ -1,0 +1,31 @@
+﻿<Page x:Class="OsaGo.Pages.Page2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OsaGo.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="Регистрация">
+
+    <Grid>
+        <Border Style="{StaticResource StyleBorder}">
+        </Border>
+        <TextBox Style="{StaticResource StyleBlock}" Margin="85,91,465,369" IsReadOnly="True"/>
+        <Label Content="Выберите id водителя:" Style="{StaticResource StyleLabel}" Margin="85,96,465,374" Width="NaN"/>
+        <ComboBox Height="40" Margin="285,91,465,369" Name="Cmb" DisplayMemberPath="Id" FontSize="20" VerticalAlignment="Center"/>
+        <TextBox Text="Регистрация учётной записи водителя" Style="{StaticResource StyleTytle}" Margin="437,160,61,174" TextWrapping="Wrap"/>
+        <Label Content="Введите логин" Name="txtHintLogin" Style="{StaticResource StyleLabel}" Margin="96,165,569,305"/>
+        <TextBox x:Name ="TextBoxLogin" Style="{StaticResource StyleBlock}" ToolTip="Введите логин аккаунта" Margin="85,160,465,300" TextChanged="TextBoxLogin_Changed" Cursor="Hand"/>
+        <Label Content="Придумайте пароль" Name="txtHintPassword" Style="{StaticResource StyleLabel}" Margin="96,235,524,235" Width="NaN"/>
+        <PasswordBox x:Name ="PasswordBox" Style="{StaticResource StylePassword}" PasswordChanged="PasswordBox_Changed" ToolTip ="Введите пароль от аккаунта" Margin="85,230,465,230" Cursor="Hand"/>
+        <Label Content="Повторите пароль" Name="txtHintPasswordCheck" Style="{StaticResource StyleLabel}" Margin="96,308,544,162" Width="NaN"/>
+        <PasswordBox x:Name ="PasswordBoxCheck" Style="{StaticResource StylePassword}" PasswordChanged="PasswordBox_Changed" ToolTip ="Введите пароль от аккаунта" Margin="85,303,465,157" Cursor="Hand"/>
+        <Button Content="Зарегистрировать" Style="{StaticResource ButtonStyle}" Margin="85,387,465,73" Click="ButtonEnter_Click"/>
+        <TextBlock Margin="741,440,29,27" Width="30" FontSize="30">
+            <Hyperlink NavigateUri = "\Pages\Agent\Agent.xaml" Cursor="Hand">
+                <TextBlock Text="&#10149;"/>
+            </Hyperlink>
+        </TextBlock>
+    </Grid>
+</Page>

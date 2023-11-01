@@ -1,0 +1,39 @@
+﻿<Page x:Class="OsaGo.Pages.Agent.PoliciesAdd"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OsaGo.Pages.Agent"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="PoliciesAdd">
+
+    <Grid>
+        <Border Style="{StaticResource StyleBorder}">
+        </Border>
+        <TextBox Text="Оформление страхового полиса" Style="{StaticResource StyleTytle}"  Margin="440,146,70,196" TextWrapping="Wrap"/>
+        <TextBox Style="{StaticResource StyleBlock}" Margin="88,61,462,399" IsReadOnly="True"/>
+        <Label Content="Выберите id водителя:" Style="{StaticResource StyleLabel}" Margin="88,66,462,404" Width="NaN" FontSize="12"/>
+        <ComboBox Text="{Binding DriverId}" Height="40" Margin="277,61,419,0" Name="CmbDr" DisplayMemberPath="Id" FontSize="15" VerticalAlignment="Top"/>
+        <TextBox Style="{StaticResource StyleBlock}" Margin="88,125,462,335" IsReadOnly="True"/>
+        <Label Content="Выберите id автомобиля:" Style="{StaticResource StyleLabel}" Margin="88,131,462,339" Width="NaN" FontSize="12"/>
+        <ComboBox Text="{Binding CarId}" Height="40" Margin="277,125,419,0" Name="CmbCar" DisplayMemberPath="Id" FontSize="15" VerticalAlignment="Top"/>
+        <Label Content="Введите страховую компанию" Style="{StaticResource StyleLabel}" Margin="88,196,460,274" Width="NaN" FontSize="12"/>
+        <TextBox Style="{StaticResource StyleBlock}" Margin="88,191,419,269" Width="NaN" IsReadOnly="True"/>
+        <ComboBox Text="{Binding InsuranceCompany}" Height="40" Margin="277,191,419,0" Name="CmbCompany" DisplayMemberPath="Title" FontSize="15" VerticalAlignment="Top"/>
+        <TextBox Style="{StaticResource StyleBlock}" Margin="88,254,419,206" Width="NaN" IsReadOnly="True"/>
+        <Label Content="Введите дату регистрации:" Style="{StaticResource StyleLabel}" Margin="88,257,460,213" Width="NaN" FontSize="12"/>
+        <DatePicker Text="{Binding RegistrationDate}" Name="ReggiDate" SelectedDateFormat="Short" Margin="277,254,419,206"/>
+        <TextBox Style="{StaticResource StyleBlock}" Margin="88,315,419,145" Width="NaN" IsReadOnly="True"/>
+        <Label Content="Введите срок действия:" Name="txtHintValidaty" Style="{StaticResource StyleLabel}" Margin="88,319,460,151" Width="NaN" FontSize="12"/>
+        <DatePicker Text="{Binding ValidityPeriod}" Name="VallyDate" SelectedDateFormat="Short" Margin="277,315,419,145"/>
+        <Label Content="Введите стоимость" Name="txtHintPrice" Style="{StaticResource StyleLabel}" Margin="88,384,460,86" Width="NaN" FontSize="12"/>
+        <TextBox x:Name ="TextBoxPrice" Text="{Binding Price}" Style="{StaticResource StyleBlock}" Margin="88,379,419,81" TextChanged="TextBoxPrice_Changed" Cursor="Hand" Width="NaN"/>
+        <Button Content="Оформить полис" Style="{StaticResource ButtonStyle}" Margin="438,379,0,81" HorizontalAlignment="Left" Width="292" Click="Formalization_Click"/>
+        <TextBlock Margin="732,34,38,433" Width="30" FontSize="30">
+            <Hyperlink NavigateUri = "\Pages\Agent\Policies.xaml" Cursor="Hand">
+                <TextBlock Text="&#10149;"/>
+             </Hyperlink>
+        </TextBlock>
+    </Grid>
+</Page>
